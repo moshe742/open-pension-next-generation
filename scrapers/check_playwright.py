@@ -53,6 +53,7 @@ def run(playwright: Playwright) -> None:
         except TimeoutError:
             position_errors.append(i)
             print(position_errors)
+
     for i in position_errors:
         try:
             with page.expect_download() as download_info:
